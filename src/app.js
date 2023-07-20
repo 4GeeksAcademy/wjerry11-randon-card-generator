@@ -8,8 +8,6 @@ import "./assets/img/4geeks.ico";
 window.onload = function() {
   //write your code here
   console.log("Hello Rigo from the console!");
-  button();
-  generateCard();
 };
 
 let generateCard = () => {
@@ -30,19 +28,20 @@ let generateCard = () => {
     "A"
   ];
   let randomSuit = suit[Math.floor(Math.random() * suit.length)];
-  let randomNumber = number[Math.floor(Math.random() * number.lenght)];
-  if (suit === "♥" || suit === "♦") {
-    document.querySelector(".icon").style.color = "red";
+  let randomNumber = number[Math.floor(Math.random() * number.length)];
+  if (randomSuit === "♥" || randomSuit === "♦") {
+    document.querySelector(".top").style.color = "red";
+    document.querySelector(".bottom").style.color = "red";
   } else {
-    document.querySelector(".icon").style.color = "black";
+    document.querySelector(".top").style.color = "black";
+    document.querySelector(".bottom").style.color = "black";
   }
-  document.querySelector(".top").style.color = randomSuit;
-  document.querySelector(".bottom").style.color = randomSuit;
-  document.querySelector(".number").style.color = randomNumber;
+  document.querySelector(".top").innerHTML = randomSuit;
+  document.querySelector(".bottom").innerHTML = randomSuit;
+  document.querySelector(".number").innerHTML = randomNumber;
 };
-let button = () => {
-  let newCard = document.querySelector(".btn");
-  newCard.addEventListener("click", function() {
-    generateCard();
-  });
-};
+
+const btn = document.querySelector(".btn");
+btn.addEventListener("click", function() {
+  generateCard();
+});
