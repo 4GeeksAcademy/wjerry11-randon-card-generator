@@ -1,5 +1,8 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
-
+body {
+  background-image: url("https://m.media-amazon.com/images/I/71JkBxy3sXL._AC_UF894,1000_ql80_.jpg");
+  background-size: cover;
+}
 .card {
   height: 275px;
   width: 200px;
@@ -8,7 +11,6 @@
   margin: 25px auto;
   display: flex;
   flex-direction: column;
-
   line-height: 90%;
 }
 .icon {
