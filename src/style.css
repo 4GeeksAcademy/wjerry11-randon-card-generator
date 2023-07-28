@@ -1,1 +1,30 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+.card {
+  height: 275px;
+  width: 200px;
+  border: 1px solid-black;
+  font-size: 58px !important;
+  margin: 25px auto;
+  display: flex;
+  flex-direction: column;
+
+  line-height: 90%;
+}
+.icon {
+  display: flex;
+}
+.top {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.bottom {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.number {
+  margin: auto;
+}
+.btn {
+  margin: 0 900px !important;
+}
